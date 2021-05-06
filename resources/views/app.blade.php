@@ -22,7 +22,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        
         <li class="nav-item">
-          <a class="/user" href="#">User</a>
+          <a href="/user" >User</a>
         </li>
 
         

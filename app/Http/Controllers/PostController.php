@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -25,6 +26,22 @@ class PostController extends Controller
         }
         
         return view('post',compact('posts'));
+    }
+
+
+    public function user(Request $request)
+    {
+        
+        $users=User::paginate(12);
+
+        if($request->ajax()){
+            $html= view('user-data',compact('users'))->render();
+            return response()->json([
+                'html' =>$html
+            ]);
+        }
+        
+        return view('user',compact('users'));
     }
 
     /**

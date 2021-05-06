@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [PostController::class, 'index']);
+Route::get('/user', [PostController::class, 'user']);
 
